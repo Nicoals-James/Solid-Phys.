@@ -41,56 +41,56 @@ So the coefficient is $A=\frac{1}{\sqrt N}$
 > $$|\psi_\alpha\rangle=\frac{1}{\sqrt N}\sum_n e^{i \vec{k} \cdot \vec{R}_{n}} |\varphi_s,\vec R_n\rangle$$
 > **we will just discuss $s$ band below**
 
-and for electrons from $p$ and $d$ states, the wavefunction is combination of the single wavefunction
+And for electrons from $p$ and $d$ states, the wavefunction is combination of the single wavefunction
 $$|\psi\rangle=\sum_\alpha|\psi_\alpha\rangle$$
 
 
 # Energy band $E(\vec k)$
-In this section, we gonna solve the eigenvalue of $\hat H$==**of $s$ state** ==
+In this section, we gonna solve the eigenvalue of $\hat H$ ==**of $s$ state** ==
 
-with respect to electron,  $$\hat H= \frac{\hat P^2}{2m_e}+\hat V(r)$$
-notice the term of potential energy is the whole potential field, but we need component form to put inside the summation. 
+With respect to electron,  $$\hat H= \frac{\hat P^2}{2m_e}+\hat V(r)$$
+Notice the term of potential energy is the whole potential field, but we need component form to put inside the summation. 
 $$\hat H= \frac{\hat P^2}{2m_e}+\hat V^{at}(r-\vec R_m)+\hat{V}(r) -\hat V^{at}(r-\vec R_m)$$
-the first two terms are Hamiltonian of a single electron in the field of a single atom
+The first two terms are Hamiltonian of a single electron in the field of a single atom
 ![[Pasted image 20220523205527.png]]
 $$\left[\frac{\hat P^2}{2m_e}+\hat V^{at}(r-\vec R_m)\right]\left|\varphi_s,\vec R_n\right\rangle=E^{at}\left|\varphi_s,\vec R_n\right\rangle$$
 
-then the **eigenvalue**:
+Then the **eigenvalue**:
 $$\begin{align}
 \left\langle\psi_s\middle |\hat H\middle|\psi_s\right\rangle&=\left\langle\psi_s\middle |\frac{\hat P^2}{2m_e}+\hat V(r)\middle|\psi_s\right\rangle\\
 
 &=\frac 1 N \sum_n\sum_m \left\langle\varphi_s,\vec R_m\middle|e^{-i \vec{k} \cdot \vec{R}_{m}}\left[\frac{\hat P^2}{2m_e}+\hat V^{at}(r-\vec R_m)\right]e^{i \vec{k} \cdot \vec{R}_{n}}\middle|\varphi_s,\vec R_n\right\rangle \\
 &+\frac 1 N \sum_n\sum_m \left\langle\varphi_s,\vec R_m\middle|\left[\hat V(r)-\hat V^{at}(r-\vec R_m)\right]e^{i \vec{k} \cdot (\vec{R}_{n}-\vec R_m)}\middle|\varphi_s,\vec R_n\right\rangle
 \end{align}$$
-the first term equals $\sum\sum\frac 1 N NE^{at}_s\delta_{nm}=E^{at}_s$  then the second term can be separated into two parts. before we do that, we first introduce an approximation. Because the range of the interaction between atoms is short, we just consider the interaction of the nearest atoms. so summation $\sum_n$ becomes a summation with respect to the nearest atoms, and denoted by 
+The first term equals $\sum\sum\frac 1 N NE^{at}_s\delta_{nm}=E^{at}_s$  then the second term can be separated into two parts. Before we do that, we first introduce an approximation. Because the range of the interaction between atoms is short, we just consider the interaction of the nearest atoms. So summation $\sum_n$ becomes a summation with respect to the nearest atoms, and denoted by 
 $$\sum_n^N\to\sum_n^{N.N}$$
 
-and we can fix $m=0$ to which is $\langle\varphi_s,\vec R_m|\to \langle\varphi_s,0|$   for symmetry 
+And we can fix $m=0$ to which is $\langle\varphi_s,\vec R_m|\to \langle\varphi_s,0|$   for symmetry 
 $$\sum_m^N\to N$$
-so the second term can be written by:
-- when $n=0$, introduce $C_s$
+So the second term can be written by:
+- When $n=0$, introduce $C_s$
 $$\begin{align}
 C_s&=\frac 1 N \sum_n^{N.N}N\left\langle\varphi_s,0\middle|\hat V(r)-\hat V^{at}(r-\vec R_n)\middle|\varphi_s,\vec R_n\right\rangle\\
 &= \left\langle\varphi_s,0\middle|\hat V(r)-\hat V^{at}(r)\middle|\varphi_s,0\right\rangle
 \end{align}$$
-- when $n\neq 0$, introduce $J$
+- When $n\neq 0$, introduce $J$
 $$\begin{align}
 The~second~term&= \sum_n^{N.N}\left\langle\varphi_s,0\middle|\left[\hat V(r)-\hat V^{at}(r-\vec R_n)\right]e^{i \vec{k} \cdot \vec{R}_{n}}\middle|\varphi_s,\vec R_n\right\rangle\\
 &=J\sum_n^{N.N}e^{i\vec k\cdot \vec R_n}
 \end{align}$$
 
-where $J=\left\langle\varphi_s,0\middle|\hat V(r)-\hat V^{at}(r-\vec R_n)\middle|\varphi_s,\vec R_n\right\rangle$, the validity lies on where eigenvector and $e^{i \vec{k} \cdot \vec{R}_{n}}$(just a number) are commutative, and potential and orbital functions are the same between nearest atoms.
+Where $J=\left\langle\varphi_s,0\middle|\hat V(r)-\hat V^{at}(r-\vec R_n)\middle|\varphi_s,\vec R_n\right\rangle$, the validity lies on where eigenvector and $e^{i \vec{k} \cdot \vec{R}_{n}}$ (just a number) are commutative, and potential and orbital functions are the same between nearest atoms.
 
 Eventually, we generate the equation of energy  band in tight binding method:
 > **energy band**
 > $$E(\vec k)=E_{s}^{a t}+C_{s}-J \sum_{R_{n}}^{N.N} e^{i \vec{k} \cdot \vec{R_{n}}}$$
 
-the key of calculation now becomes the summation on nearest atoms, and we have table below for tips.
+The key of calculation now becomes the summation on nearest atoms, and we have table below for tips.
 ![[Pasted image 20220524100536.png]]
 
 
-## band width
-we just take **bcc and $s$ band only** as an example
+## Band width
+We just take **bcc and $s$ band only** as an example
 $$\begin{align}
 E_{s}(\vec{k}) & = E_{s}^{a t}+C_{s}-J \sum_{n}^{N. N} e^{i \vec{k} \cdot \vec{R}_{n}} \\ & = E_{s}^{a t}+C_{s}-J \sum_{n}^{N .N} e^{i\left(k_{x} \vec{i}+k_{y} \vec{j}+k_{z} \vec{k}\right) \cdot \vec{R}_{n}} \\ & = E_{s}^{a t}+C_{s}-8 J \cos \frac{a}{2} k_{x} \cos \frac{a}{2} k_{y} \cos \frac{a}{2} k_{z}
 \end{align}$$
@@ -98,11 +98,17 @@ E_{s}(\vec{k}) & = E_{s}^{a t}+C_{s}-J \sum_{n}^{N. N} e^{i \vec{k} \cdot \vec{R
 $$E_{s \min }=E_{s}^{a t}+C_{s}-8 J$$
 
 - $E_s(\vec k)$ reaches its **maximum** at $H$ point $$\begin{array}{l}
-k_{x}=\pm \frac{2 \pi}{a}, \quad k_{y}=0, \quad k_{z}=0 \quad \quad(H_1) \\
-k_{x}=0, \quad k_{y}=\pm \frac{2 \pi}{a}, \quad k_{z}=0 \quad \quad(H_2) \\
-k_{x}=0, \quad k_{y}=0, \quad k_{z}=\pm \frac{2 \pi}{a} \quad \quad(H_3)
-\end{array}$$$$E_{s \max }=E_{s}^{a t}+C_{s}+8 J$$
-## effective mass
-ref: [[Crystal dynamics#^971bd1|definition of effective mass]]
-energy band can always can represented by the terms of effective mass.
+K_{x}=\pm \frac{2 \pi}{a}, \quad k_{y}=0, \quad k_{z}=0 \quad \quad (H_1) \\
+K_{x}=0, \quad k_{y}=\pm \frac{2 \pi}{a}, \quad k_{z}=0 \quad \quad (H_2) \\
+K_{x}=0, \quad k_{y}=0, \quad k_{z}=\pm \frac{2 \pi}{a} \quad \quad (H_3)
+\end{array} $$$$ E_{s \max }=E_{s}^{a t}+C_{s}+8 J$$
+## Effective mass
+Ref: [[Crystal dynamics#^971bd1|definition of effective mass]]
+Energy band can always can represented by the terms of effective mass.
 $$E(\vec k)=E_0+\frac 1 2\hbar ^2k_i\left(\frac{1}{m^*}\right)^{ij}k_j$$
+
+Similarly, we just take **bcc and $s$ band only** as an example
+$$E(\vec k)= E_{s}^{a t}+C_{s}-8 J \cos \frac{a}{2} k_{x} \cos \frac{a}{2} k_{y} \cos \frac{a}{2} k_{z}$$
+- Near the bottom of energy bands ($\Gamma$ [[Brillouin Zone#Symmetry points and axes|point]]) 
+then we have $k\to 0, ~~\cos ak=1-\frac 1 2 (ak)^2$
+ 

@@ -15,7 +15,7 @@ Clearly, if the energy band is empty, it is impossible to generate current.
 ### Fully occupied (insulator)
 ![[Pasted image 20220515231128.png|300]] ![[Pasted image 20220515231215.png|300]] 
 
-Full band means that every state $k$ is occupied by 2 **value electron** (2 types of spin). 
+Full band means that every state $k$ is occupied by 2 **valence electron** (2 types of spin). 
 
 By the [[Crystal dynamics#^733cfd|equation of motion]] we gain 
 $$\frac{d p}{d t}=-e \varepsilon=\hbar \frac{\mathrm d k }{\mathrm  d t}$$
@@ -31,7 +31,7 @@ The energy band is not fully occupied, so when the external field starts to work
 $$j=\sum_k-ev(k)\neq 0$$
 ![[Pasted image 20220515232950.png]]
 ### Conclusion 
-Generally, in one dimension case, there are $N$ $k$ s in the first BZ (ref: [[Free electron theory#State in vec k space|DOS]]) where $N$ is the number of primitive cells, so each energy band can hold $2N$ value electrons.
+Generally, in one dimension case, there are $N$ $k$ s in the first BZ (ref: [[Free electron theory#State in vec k space|DOS]]) where $N$ is the number of primitive cells, so each energy band can hold $2N$ valence electrons.
 
 ![[Pasted image 20220516104950.png]]
 - If band1 is full, band2 is empty then the crystal is **insulator**
@@ -43,26 +43,26 @@ Mostly, the relation between the capacity of  electrons and energy bands is quit
 ## Alkali metals
 For _Li_ crystal:
 - Structure: [[典型晶体结构#Body-Centered Cubic BCC|BCC]], there are 1 atoms in a primitive cell
-- Value electron: $ns^1$
+- valence electron: $ns^1$
 
-So if there $N$ primitive cells then $N$ _Li_ atoms then $N$ value electrons.
+So if there $N$ primitive cells then $N$ _Li_ atoms then $N$ valence electrons.
 - Capacity of electrons: $2N$
 
-Capacity is larger then the number of value electrons, so _Li_ is conductor.
+Capacity is larger then the number of valence electrons, so _Li_ is conductor.
 
 ## Alkaline earth metals (第二主族元素)
 With the same analysis
 - Structure: [[典型晶体结构#Hexagonal Close Cacking Ctructure 密堆积结构|hexagonal close-packed (hcp)]], there are 2 atoms in primitive cell 
-- Value electron: $ns^2$ 
+- valence electron: $ns^2$ 
 
-For $N$ primitive cells there are $4N$ value electrons but $2N$ capacity of electron. **ERROR**
+For $N$ primitive cells there are $4N$ valence electrons but $2N$ capacity of electron. **ERROR**
 
 > **modification** the capacity of electrons
 > Define capacity of electrons as the electrons number every energy band can hold.
 > $$\text{capacity of electrons}=2N(2l+1)m$$
 > Where $N$ is the number of primitive cells, $l$ is the azimuthal quantum number, $m$ is the **number of atoms** in a primitive cell
 
-In new definition, capacity of electrons becomes $4N$ which equals the number of value electrons. It's insulator? ERROR again. In fact crystal of Mg is 3-dimensional, so the energy band will be different at different direction.
+In new definition, capacity of electrons becomes $4N$ which equals the number of valence electrons. It's insulator? ERROR again. In fact crystal of Mg is 3-dimensional, so the energy band will be different at different direction.
 ![[Pasted image 20220516112135.png]]
 According to the fig, Mg is conductor
 

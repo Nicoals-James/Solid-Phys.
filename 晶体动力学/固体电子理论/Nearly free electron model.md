@@ -62,7 +62,7 @@ Too small, just remain the 1th approx of eigenvector
 
 ## Conclusion
 - Energy 
-$$E_n=E_n^{(0)}+E^{(2)}=\frac{\hbar ^2k_n^2}{2m_e}+\sum_{m}' \frac{2 m_e\left|V_{m}\right|^{2}}{\hbar^{2} k_n^{2}-\hbar^{2}\left(k_n-\frac{2 \pi}{a} m\right)^{2}}$$
+$$E_n=E_n^{(0)}+E^{(2)}=\frac{\hbar ^2k_n^2}{2m_e}+\sum_{m}' \frac{2 m_e\left|V_{m}\right|^{2}}{\hbar^{2} k_n^{2}-\hbar^{2}\left(k_n-\frac{2 \pi}{a} m\right)^{2}}$$ ^591150
 - Eigenvector
 $$\begin{align}
 \langle x|n\rangle&=\langle x|n\rangle^{(0)}+\langle x|n\rangle^{(1)}\\
