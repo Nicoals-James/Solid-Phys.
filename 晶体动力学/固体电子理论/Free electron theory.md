@@ -61,8 +61,9 @@ We will derivate the energy of electron gas in another way.
 
 ### Prepare
 - Total distribution
-$$f(E)=\frac{g_l}{e^{(E-E_F)/kT}+1}$$
+$$f(E)=\frac{1}{e^{(E-E_F)/kT}+1}$$
 Where $E_F$ is [[Fermi gas#^4f01a7|Fermi energy]]
+**attention** theoretically, $f(E)$ should include the degeneracy over energy $g_l$ (ref: [[近独立子系#F-D 分布|F-D distribution over energy]]), but here the degeneracy is included by DOS $g(E)$.
 
 ![[Pasted image 20220428113211.png|300]]
 In different cases
@@ -98,7 +99,7 @@ Then
 $$E_F^0=\frac{h^{2}}{2 m}\left(\frac{3 n}{8 \pi}\right)^{2 / 3}$$
 (ref: [[Fermi gas#T 0]]  where $g=2$)
 
-And **average energy at $T=0$ **:
+And **average energy at $T=0$**:
 $$\bar E=\frac E N=\frac{3}{5}  E^0_{\mathrm{F}}$$ ^09b9db
 
 #### $T\neq 0$
@@ -110,11 +111,11 @@ $$N=\int_0^{\infty} f(E)g(E)\mathrm dE$$
 Where  
 $$f(E)= \frac{1}{\exp \left(\frac{E-E_{F}}{k T}\right)+1} ,\quad\quad\quad g(E) =C E^{1 / 2}$$
 Where $C$ represents the coefficient of $g(E)$. Integral by parts then 
-$$N=\left. f(E)(\int_0^E g(E)\mathrm dE) \right|_{0} ^{\infty}+\int_{0}^{\infty} (\int_0^E g(E)\mathrm dE)\left(-\frac{\partial f}{\partial E}\right) d E$$
+$$N=\left. f(E)(\int_0^E g(\varepsilon)\mathrm d\varepsilon) \right|_{0} ^{\infty}+\int_{0}^{\infty} (\int_0^E g(\varepsilon)\mathrm d\varepsilon)\left(-\frac{\partial f}{\partial E}\right) d E$$
 Let
-$$H(E)=\int_0^E g(E)\mathrm dE$$
+$$H(E)=\int_0^E g(\varepsilon)\mathrm d\varepsilon$$
 Then 
-$$\left.N=f(E)H(E)\right|_{0}^{\infty} + \int_{0}^{\infty} H(E)\left(-\frac{\partial f}{\partial E}\right) \mathrm d E$$
+$$N=f(E)H(E)\bigg|_{0}^{\infty} + \int_{0}^{\infty} H(E)\left(-\frac{\partial f}{\partial E}\right) \mathrm d E$$
 Since the first term equals zero ($E\to \infty,f(E)=0$). Then we come to discuss the expression of the latter one. ^297c4e
 
 Since $-\frac{\partial f}{\partial E}$ is $\delta$ -like, the integral does not equal zero only in the neighbourhood of $E_F$, do Taylor expansion on $H(E)$
@@ -153,12 +154,12 @@ For
 $$H(E_F)=\frac{2}{3} C E_F^{3 / 2}, H^{\prime \prime}(E_F)=\frac{1}{2} C E_F^{-1 / 2}$$
 Where $C=4 \pi\left(\frac{2 m}{\hbar^{2}}\right)^{3 / 2}$
 
-Then the **Fermi energy at $T\neq 0$ ** is 
+Then the **Fermi energy at $T\neq 0$** is 
 $$\begin{align}
 E_F&=E^0_{\mathrm{F}}\left[1+\frac{\pi^{2}}{8}\left(\frac{k_{\mathrm{B}} T}{E_F}\right)^{2}\right]^{-2 / 3}\\
 &\approx E^0_{\mathrm{F}}\left[1-\frac{\pi^{2}}{12}\left(\frac{k_{\mathrm{B}} T}{E_F}\right)^{2}\right]
 \end{align}$$
-Actually the expression is a equation which we don't expect. Do a **trick**: for $kT$ is small and $E_F,E^0_F$ are so big, substituting $E_F$ for $E_F^0$ makes little difference, then
+Actually the expression is a equation which we don't expect. Do a **trick** : for $kT$ is small and $E_F,E^0_F$ are so big, substituting $E_F$ for $E_F^0$ makes little difference, then
 $$E_F\approx E^0_{\mathrm{F}}\left[1-\frac{\pi^{2}}{12}\left(\frac{k_{\mathrm{B}} T}{E^0_F}\right)^{2}\right]$$
 - The total energy of the system is showed below. 
 ![[Fermi gas#^a30cba]]
